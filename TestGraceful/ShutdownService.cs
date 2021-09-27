@@ -25,7 +25,7 @@ namespace TestGraceful
         {
 
 			Log.Logger = new LoggerConfiguration()
-				.WriteTo.Seq("http://172.23.80.1:5300")
+				.WriteTo.Seq("http://172.16.64.103:5300")
 				.CreateLogger();
             Log.Information("Test!!");
 
@@ -52,10 +52,16 @@ namespace TestGraceful
 
                 Console.WriteLine("ApplicationStopped SIGTERM received");
                 Log.Information("ApplicationStopped SIGTERM received");
-                Thread.Sleep(3_000);
+				for (int i = 0; i < 3; i++)
+				{
+                    Thread.Sleep(1_000);
+                    Log.Information("Sleep: "+i);
+                    Console.WriteLine("Sleep: " + i);
+                }
+               
                 Log.Information("Termination delay complete, continuing stopping process");
                 Console.WriteLine("Termination delay complete, continuing stopping process");
-                Environment.Exit(0);
+               // Environment.Exit(0);
             });
 
 			BackgroundTask = Task.Run(async () =>
