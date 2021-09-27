@@ -8,8 +8,8 @@ RUN dotnet build "TestGraceful.csproj" -c Release -o /app/build
 
 FROM build AS publish
 RUN dotnet publish "TestGraceful.csproj" -c Release -o /app/publish
-RUN apt-get update
-RUN apt-get install -y procps
+#RUN apt-get update
+#RUN apt-get install -y procps
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
