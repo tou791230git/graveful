@@ -1,0 +1,7 @@
+services:
+  testgraceful:
+    build:
+      context: C:\Users\Admin\Desktop\Project\Local\TestGraceful
+      dockerfile: TestGraceful/Dockerfile
+    image: testgraceful
+version: '3.4'

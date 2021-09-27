@@ -1,0 +1,24 @@
+version: '3.4'
+
+services:
+  testgraceful:
+    image: testgraceful:dev
+    container_name: TestGraceful
+    build:
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "TestGraceful"
+    #environment:
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_testgraceful$
+    volumes:
+      - C:\Users\Admin\Desktop\Project\Local\TestGraceful\TestGraceful:/app
+      - C:\Users\Admin\vsdbg\vs2017u5:/remote_debugger:rw
+#$nuget_volume_mapping_testgraceful$
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_testgraceful$ \"/app/bin/Debug/net5.0/TestGraceful.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true

@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "TestGraceful": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
