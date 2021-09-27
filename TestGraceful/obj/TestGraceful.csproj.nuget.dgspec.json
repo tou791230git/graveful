@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Desktop\\Project\\Local\\TestGraceful\\TestGraceful\\TestGraceful.csproj": {}
+    "C:\\Users\\Admin\\Desktop\\Project\\GitSelf\\graveful\\TestGraceful\\TestGraceful.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Desktop\\Project\\Local\\TestGraceful\\TestGraceful\\TestGraceful.csproj": {
+    "C:\\Users\\Admin\\Desktop\\Project\\GitSelf\\graveful\\TestGraceful\\TestGraceful.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Project\\Local\\TestGraceful\\TestGraceful\\TestGraceful.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Project\\GitSelf\\graveful\\TestGraceful\\TestGraceful.csproj",
         "projectName": "TestGraceful",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\Project\\Local\\TestGraceful\\TestGraceful\\TestGraceful.csproj",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\Project\\GitSelf\\graveful\\TestGraceful\\TestGraceful.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\Project\\Local\\TestGraceful\\TestGraceful\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\Project\\GitSelf\\graveful\\TestGraceful\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

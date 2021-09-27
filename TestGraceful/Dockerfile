@@ -10,7 +10,6 @@ FROM build AS publish
 RUN dotnet publish "TestGraceful.csproj" -c Release -o /app/publish
 RUN apt-get update
 RUN apt-get install -y procps
-RUN trap "exit" SIGTERM
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
